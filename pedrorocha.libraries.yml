@@ -1,0 +1,8 @@
+# Custom js and dependencies.
+pedrorocha-corescripts:
+  version: VERSION
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

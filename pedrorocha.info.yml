@@ -1,0 +1,32 @@
+name: PedroRocha.net
+type: theme
+description: 'Baseado no Bootstrap 3.x'
+package: PedroRocha
+version: 8.x-1.x
+core: 8.x
+
+libraries:
+
+stylesheets:
+  all:
+    - css/style.css
+  print:
+    - css/print.css
+
+regions:
+  help: Help
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  aside_left: 'Aside Left'
+  content: Content
+  aside_right: 'Aside Right'
+  footer_firstcolumn: 'Footer first column'
+  footer_secondcolumn: 'Footer second column'
+  footer_thirdcolumn: 'Footer third column'
+  footer_fourthcolumn: 'Footer fourth column'
+  footer: Footer
+
+settings:
+  breadcrumbs: '1'
+  show_window_size: '0'

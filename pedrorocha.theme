@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the prius theme.
+ */
+
+function pedrorocha_preprocess_page(&$vars) {
+    $vars['content_column_class'] == 111;
+    if (!empty($vars['page']['aside_left']) && !empty($vars['page']['aside_right'])) {
+        $vars['content_column_class'] = 'col-sm-6';
+    }
+    elseif (!empty($vars['page']['aside_left']) || !empty($vars['page']['aside_right'])) {
+        $vars['content_column_class'] = 'col-sm-9';
+    }
+    else {
+        $vars['content_column_class'] = 'col-sm-12';
+    }
+}
+
+function pedrorocha_preprocess_block(&$vars) {
+    if($vars['elements']['#plugin_id'] != 'system_main_block') {
+        $vars['attributes']['class'][] = 'well';
+    }
+}
+
+function pedrorocha_preprocess_links(&$vars) {
+    if($vars['theme_hook_original'] == 'links__system_main_menu') {
+        $vars['attributes']['class'][] = 'nav';
+        $vars['attributes']['class'][] = 'navbar-nav';
+    }
+}
